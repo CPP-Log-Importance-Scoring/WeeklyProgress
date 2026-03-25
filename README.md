@@ -1,3 +1,5 @@
+CPP Meeting - 3 : 17/03/26
+
 ->Multi-layered architecture: Designed a structured system pipeline from log ingestion (Fluent Bit, Kafka) through normalization and template extraction to the final visualization layer.
 
 ->Scoring logic: Developed an importance_score formula combining event weight, log frequency (log-scaled), and correlation score to rank logs effectively.
