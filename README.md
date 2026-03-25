@@ -5,4 +5,4 @@ Incident correlation: Built a system to group related logs into incident cluster
 
 #Documentation
 [View Project Documentation]
-(System Design.pdf)
+(System_Design.pdf)
