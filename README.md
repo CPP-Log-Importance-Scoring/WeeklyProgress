@@ -2,13 +2,13 @@
 
 #Discussion
 
-->Multi-layered architecture: Designed a structured system pipeline from log ingestion (Fluent Bit, Kafka) through normalization and template extraction to the final visualization layer.
+Multi-layered architecture: Designed pipeline from log ingestion to visualization.
 
-->Scoring logic: Developed an importance_score formula combining event weight, log frequency (log-scaled), and correlation score to rank logs effectively.
+Scoring logic: Created importance_score using event weight, frequency, and correlation.
 
-->Event weighting: Implemented a rule-based approach to assign base weights based on event type, with log level acting as a dynamic modifier for severity.
+Event weighting: Used rule-based method with log level as modifier.
 
-->Incident correlation: Built a system to group related logs into incident clusters using template extraction and correlation based on time proximity and component similarity.
+Incident correlation: Grouped related logs into clusters based on time and component.
 
 #Contributions
 
