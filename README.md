@@ -79,3 +79,12 @@
 - Sharva: Implemented the core parsing pipeline which includes the LogRecord schema with all stage wise fields, the syslog line parser with per service event extraction rules, and the template extraction module that normalises log messages and assigns template IDs to group similar logs.
 
 ---
+## **CPP Meeting 6: 07/04/26**
+
+### Discussion:
+
+- The meeting was cancelled due to internal examinations.
+
+### Contribution:
+
+- No contributions for this week due to internal examinations.
