@@ -31,7 +31,7 @@
 
 ---
 
-## **CPP Meeting - 3 : 17/03/26**
+## **CPP Meeting 3: 17/03/26**
 
 ### Discussion:
 
@@ -79,6 +79,7 @@
 - Sharva: Implemented the core parsing pipeline which includes the LogRecord schema with all stage wise fields, the syslog line parser with per service event extraction rules, and the template extraction module that normalises log messages and assigns template IDs to group similar logs.
 
 ---
+
 ## **CPP Meeting 6: 07/04/26**
 
 ### Discussion:
@@ -88,3 +89,25 @@
 ### Contribution:
 
 - No contributions for this week due to internal examinations.
+
+---
+
+## **CPP Meeting 7: 15/04/26**
+
+### Discussion:
+
+- Presented system design document and ML approach  
+- Presented rule-based scoring system  
+- Suggested increasing template diversity or moving towards dynamic template assignment  
+
+### Contribution:
+
+- Shreeraksha M: Completed implementation of event weight calculation using configurable weights and developed the importance scoring module by combining event weight, frequency, and correlation signals.  
+
+- Vishon Dsouza: Enhanced dataset (logs2.txt) with multiple log types and created logs3.txt with burst patterns and anomaly scenarios. Took team feedback to sort logs in ascending timestamp order.  
+
+- Sharva: Validated the scoring pipeline by examining calculated scores across parsed log records, verifying that severity scores, event type scores, and event weights are correctly assigned across different log types.  
+
+- Ujwal Hegde: Implemented the Isolation Forest–based anomaly detection pipeline and engineered features such as frequency, deviation, and rarity for model input. Analyzed model behavior in depth, including feature influence, path-based isolation, and anomaly scoring.  
+
+- Sumukha: Enhanced system design and added new layers to address challenges highlighted by the mentor and team. Also introduced graph-based computation for correlation and improved clarity on dynamic template creation and management.
