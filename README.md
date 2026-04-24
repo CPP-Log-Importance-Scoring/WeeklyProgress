@@ -111,3 +111,26 @@
 - Ujwal Hegde: Implemented the Isolation Forest–based anomaly detection pipeline and engineered features such as frequency, deviation, and rarity for model input. Analyzed model behavior in depth, including feature influence, path-based isolation, and anomaly scoring.  
 
 - Sumukha: Enhanced system design and added new layers to address challenges highlighted by the mentor and team. Also introduced graph-based computation for correlation and improved clarity on dynamic template creation and management.
+
+---
+
+## **CPP Meeting 8: 21/04/26**
+
+### Discussion:
+
+- Focused primarily on improving the rule-based scoring system based on feedback from the previous presentation  
+- Presented dynamic template extraction approach to enhance log grouping and improve scoring and correlation  
+- Mentor instructed the team to prepare a presentation (PPT) for the next checkpoint covering problem understanding, approach, and system design
+- Suggested exploring AI/ML models to cross check and validate the results of the rule-based system as part of further improvement  
+
+### Contribution:
+
+- Sharva: Validated the dataset by examining log consistency and correctness across different scenarios, and tuned event weights to improve the accuracy and balance of the scoring mechanism across various log types and patterns  
+
+- Sumukha: Could not contribute this week due to organizing a hackathon  
+
+- Ujwal Hegde: Improved the ML pipeline by refining the Isolation Forest model, enhancing feature engineering with frequency, deviation, rarity, and change, and making the system more robust through adaptive thresholding and generalized log handling  
+
+- Shreeraksha M: Improved log importance scoring and cross-signal correlation by enhancing template-based grouping using dynamic template extraction and refining scoring weights to better reflect real-world incident severity  
+
+- Vishon: Improved dataset based on prior feedback, simulating multi-host infrastructure with realistic noise and diverse events. Includes explicit attack chains and failure cascades for log correlation and anomaly detection  
