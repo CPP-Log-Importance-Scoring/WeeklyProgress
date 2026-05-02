@@ -134,3 +134,26 @@
 - Shreeraksha M: Improved log importance scoring and cross-signal correlation by enhancing template-based grouping using dynamic template extraction and refining scoring weights to better reflect real-world incident severity  
 
 - Vishon: Improved dataset based on prior feedback, simulating multi-host infrastructure with realistic noise and diverse events. Includes explicit attack chains and failure cascades for log correlation and anomaly detection  
+
+---
+
+## **CPP Meeting 9: 28/04/26**
+
+### Discussion:
+
+- Presented the first checkpoint PPT draft to the mentor and incorporated the feedback received to revise and improve the presentation.
+- Briefed the mentor on the work distribution across the team for the ML implementation phase.
+- Discussed the limitations and challenges encountered during the rule-based implementation, and elaborated on how the proposed ML-based approach addresses those shortcomings and offers a more robust solution.
+
+
+### Contribution:
+
+- Sumukha: Initialized the ML repository structure and configured persistent volumes for the database container. Conducted research into established methods for implementing the sequence analysis and correlation engine layers of the pipeline.
+
+- Ujwal: Strengthened the ML pipeline by refining feature engineering and optimizing the Isolation Forest–based anomaly detection, and contributed to the design of the importance scoring layer by combining ML outputs with correlation and novelty signals.
+
+- Sharva: Compared the pipeline's log scoring output with LLM output to evaluate alignment and identify gaps in critical event detection.
+
+- Vishon: Configured a Docker Compose logging stack with PostgreSQL, Elasticsearch, Grafana, and Kibana. Updated service setup, secured credentials using .env, and added .gitignore. Successfully tested all containers locally and verified integration.
+
+- Shreeraksha M: Validated and tuned the rule-based scoring system by experimenting with multiple datasets and refining weight configurations for improved log scoring. Initiated the ML anomaly detection pipeline by implementing a z-score based baseline and structuring the anomaly detection module in preparation for Isolation Forest integration and hybrid scoring.
