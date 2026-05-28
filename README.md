@@ -96,19 +96,19 @@
 
 ### Discussion:
 
-- Presented system design document and ML approach  
-- Presented rule-based scoring system  
-- Suggested increasing template diversity or moving towards dynamic template assignment  
+- Presented system design document and ML approach
+- Presented rule-based scoring system
+- Suggested increasing template diversity or moving towards dynamic template assignment
 
 ### Contribution:
 
-- Shreeraksha M: Completed implementation of event weight calculation using configurable weights and developed the importance scoring module by combining event weight, frequency, and correlation signals.  
+- Shreeraksha M: Completed implementation of event weight calculation using configurable weights and developed the importance scoring module by combining event weight, frequency, and correlation signals.
 
-- Vishon Dsouza: Enhanced dataset (logs2.txt) with multiple log types and created logs3.txt with burst patterns and anomaly scenarios. Took team feedback to sort logs in ascending timestamp order.  
+- Vishon Dsouza: Enhanced dataset (logs2.txt) with multiple log types and created logs3.txt with burst patterns and anomaly scenarios. Took team feedback to sort logs in ascending timestamp order.
 
-- Sharva: Validated the scoring pipeline by examining calculated scores across parsed log records, verifying that severity scores, event type scores, and event weights are correctly assigned across different log types.  
+- Sharva: Validated the scoring pipeline by examining calculated scores across parsed log records, verifying that severity scores, event type scores, and event weights are correctly assigned across different log types.
 
-- Ujwal Hegde: Implemented the Isolation Forest–based anomaly detection pipeline and engineered features such as frequency, deviation, and rarity for model input. Analyzed model behavior in depth, including feature influence, path-based isolation, and anomaly scoring.  
+- Ujwal Hegde: Implemented the Isolation Forest–based anomaly detection pipeline and engineered features such as frequency, deviation, and rarity for model input. Analyzed model behavior in depth, including feature influence, path-based isolation, and anomaly scoring.
 
 - Sumukha: Enhanced system design and added new layers to address challenges highlighted by the mentor and team. Also introduced graph-based computation for correlation and improved clarity on dynamic template creation and management.
 
@@ -118,22 +118,22 @@
 
 ### Discussion:
 
-- Focused primarily on improving the rule-based scoring system based on feedback from the previous presentation  
-- Presented dynamic template extraction approach to enhance log grouping and improve scoring and correlation  
+- Focused primarily on improving the rule-based scoring system based on feedback from the previous presentation
+- Presented dynamic template extraction approach to enhance log grouping and improve scoring and correlation
 - Mentor instructed the team to prepare a presentation (PPT) for the next checkpoint covering problem understanding, approach, and system design
-- Suggested exploring AI/ML models to cross check and validate the results of the rule-based system as part of further improvement  
+- Suggested exploring AI/ML models to cross check and validate the results of the rule-based system as part of further improvement
 
 ### Contribution:
 
-- Sharva: Validated the dataset by examining log consistency and correctness across different scenarios, and tuned event weights to improve the accuracy and balance of the scoring mechanism across various log types and patterns  
+- Sharva: Validated the dataset by examining log consistency and correctness across different scenarios, and tuned event weights to improve the accuracy and balance of the scoring mechanism across various log types and patterns
 
-- Sumukha: Could not contribute this week due to organizing a hackathon  
+- Sumukha: Could not contribute this week due to organizing a hackathon
 
-- Ujwal Hegde: Improved the ML pipeline by refining the Isolation Forest model, enhancing feature engineering with frequency, deviation, rarity, and change, and making the system more robust through adaptive thresholding and generalized log handling  
+- Ujwal Hegde: Improved the ML pipeline by refining the Isolation Forest model, enhancing feature engineering with frequency, deviation, rarity, and change, and making the system more robust through adaptive thresholding and generalized log handling
 
-- Shreeraksha M: Improved log importance scoring and cross-signal correlation by enhancing template-based grouping using dynamic template extraction and refining scoring weights to better reflect real-world incident severity  
+- Shreeraksha M: Improved log importance scoring and cross-signal correlation by enhancing template-based grouping using dynamic template extraction and refining scoring weights to better reflect real-world incident severity
 
-- Vishon: Improved dataset based on prior feedback, simulating multi-host infrastructure with realistic noise and diverse events. Includes explicit attack chains and failure cascades for log correlation and anomaly detection  
+- Vishon: Improved dataset based on prior feedback, simulating multi-host infrastructure with realistic noise and diverse events. Includes explicit attack chains and failure cascades for log correlation and anomaly detection
 
 ---
 
@@ -176,8 +176,49 @@
 - Sharva: Developed the simulated sessionized log pipeline and implemented feature extraction for session-level metrics such as frequency and burstiness scores. Validated schema consistency and structured the pipeline to support further ML integration and anomaly detection enhancements.
 
 - Vishon: Defined the PostgreSQL schema structure for logs and related pipeline data, verified table creation and consistency locally using Docker, configured the db_writer module to align with the database schema, created Elasticsearch index mappings for log fields, and implemented centralized .env-based environment variable handling with validation support.
-  
+
 - Shreeraksha M: Initiated the ML anomaly detection module by implementing the Isolation Forest–based anomaly detector skeleton with configurable contamination and hybrid scoring parameters. Worked on the initial trainer module structure for retraining and model serialization, documented key ML design decisions, and added preliminary tests for anomaly output and schema validation.
 
 
+## **CPP Meeting 11: 12/05/26**
+
+### Discussion:
+
+- The meeting was cancelled due to Sem End Examinations.
+
+### Contribution:
+
+* Sharva Dhanvi V: Continued development of the Phase 2 feature engineering pipeline by integrating all feature modules into feature_pipeline.py. Implemented statistical, temporal, severity, and counter proximity features on sessionized log data, added schema validation and parquet export support, improved malformed-row handling with centralized logging, and expanded edge-case testing for timestamp ordering, sparse sessions, and missing values.
+
+* Shreeraksha M: Continued implementation of the ML anomaly detection layer using Isolation Forest with configurable contamination and hybrid scoring support. Worked on sliding-window retraining, model persistence, cold-start fallback handling, anomaly output generation, and evaluator/test coverage for anomaly scoring workflows.
+
+* Sumukha Rao H: Continued development of the correlation and shared infrastructure layers by scaling the graph builder for real datasets, implementing centrality computation and sequence detection, generating graph scoring outputs and graph exports, and simultaneously maintaining parsing validation, shared schema definitions, logger utilities, helper functions, and end-to-end pipeline orchestration support.
+
+* Ujwal Hegde: Continued integration of the importance scoring pipeline by combining anomaly outputs, graph scores, and engineered features into a unified scoring workflow. Worked on configurable label mapping, DBSCAN-based incident clustering, root cause ranking, confidence scoring, and finalized output schema handling for scored logs and root cause datasets.
+
+* Vishon Dsouza: Continued implementation of storage and visualization modules by developing PostgreSQL and Elasticsearch writers, refining schema and indexing support, scaffolding evaluation and benchmarking utilities, and configuring Grafana and Kibana dashboards for anomaly visualization, incident monitoring, and log exploration workflows.
+
+---
+## **CPP Meeting 12: 19/05/26**
+
+### Discussion:
+
+- The meeting was cancelled due to Sem End Examinations.
+
+### Contribution:
+
+- No contributions for this week due to Sem End Examinations.
+
+---
+## **CPP Meeting 13: 26/05/26**
+
+### Discussion:
+
+- The meeting was cancelled due to Sem End Examinations.
+
+### Contribution:
+
+- No contributions for this week due to Sem End Examinations.
+
+---
 
