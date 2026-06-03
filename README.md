@@ -221,4 +221,24 @@
 - No contributions for this week due to Sem End Examinations.
 
 ---
+##  **CPP Meeting 14: 02/06/26**
+
+### Discussion:
+
+* The ML pipeline and Incident Intelligence Dashboard were presented and reviewed.
+* Mentor advised the team to properly document individual contributions for future presentations and project tracking.
+* Discussed generating logs in multiple formats and scenarios to improve model training, evaluation, and robustness.
+
+### Contribution:
+
+* **Shreeraksha M:** Implemented the LLM summary generation module using Gemini with a batch-processing architecture and caching support. Added summary generation and regeneration workflows as per dashboard requirements. Developed the initial Streamlit dashboard structure and completed the basic UI design for the major dashboard pages. Implemented page layouts, navigation flow, and dashboard components required for incident visualization. Integrated summary display functionality into the dashboard interface.
+
+* **Sumukha:** Worked on integrating all individual modules into a functioning end-to-end pipeline. Identified the gradual drift edge case and implemented sliding-window retraining to improve adaptation to evolving patterns. Created `fingerprint.py` to extract unique templates from incidents and compute Jaccard Similarity and Overlap Coefficient metrics. Generated synthetic datasets using Claude to inject anomaly and gradual drift scenarios. Tested the pipeline and analyzed expected versus actual behavior.
+
+* **Ujwal Hegde:** Worked on the ML training and drift detection phase of the network anomaly detection pipeline. Studied the complete training architecture involving Isolation Forest, statistical drift detection, rolling feature storage, and automatic retraining. Generated realistic network log datasets, validated the training workflow through the pipeline, and analyzed model behavior, retraining mechanisms, and anomaly detection outputs. Currently working on a multi-day gradual drift simulation to evaluate system adaptability while maintaining accurate anomaly and root-cause detection.
+
+* **Sharva:** Worked on synthetic data generation and validation for the anomaly detection pipeline. Created realistic network log scenarios covering normal behavior, routing instability, gradual drift, authentication attacks, and cross-system cascades. Defined anomaly and root-cause labels, validated dataset quality, and prepared ground-truth data for downstream ML training and evaluation.
+
+* **Vishon Dsouza:** Worked on the storage layer by enhancing the database schema, implementing summary caching functionality, and adding support for loading pipeline output files into PostgreSQL. Verified loading of scored logs and root-cause data into Postgres, validated Elasticsearch indexing, initialized the dashboard module, and implemented PostgreSQL and Elasticsearch helper functions for dashboard data retrieval and log search.
+
 
