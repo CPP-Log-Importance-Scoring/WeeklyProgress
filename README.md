@@ -239,6 +239,26 @@
 
 * **Sharva:** Worked on synthetic data generation and validation for the anomaly detection pipeline. Created realistic network log scenarios covering normal behavior, routing instability, gradual drift, authentication attacks, and cross-system cascades. Defined anomaly and root-cause labels, validated dataset quality, and prepared ground-truth data for downstream ML training and evaluation.
 
-* **Vishon Dsouza:** Worked on the storage layer by enhancing the database schema, implementing summary caching functionality, and adding support for loading pipeline output files into PostgreSQL. Verified loading of scored logs and root-cause data into Postgres, validated Elasticsearch indexing, initialized the dashboard module, and implemented PostgreSQL and Elasticsearch helper functions for dashboard data retrieval and log search.
+---
+## **CPP Meeting 15: 09/06/26**
 
+### Discussion:
 
+- Reviewed the integrated end-to-end pipeline and finalized the handoff plan for the dashboard and anomaly detection components.
+- Discussed the need to synchronize the Groq LLM summary generation flow with the incident dashboard and confirm update frequency for summary regeneration.
+- Evaluated the drift detection strategy and decided to add targeted alerts for gradual drift scenarios based on feature distribution shifts.
+- Confirmed synthetic dataset coverage for model validation, ensuring normal, drift, attack, and correlated failure cases were represented.
+
+### Contribution:
+
+* **Ujwal Hegde:** Focused on improving the stability and maintainability of the core pipeline. Identified and resolved execution edge cases by implementing a critical fix to prevent the pipeline from silently continuing when a step produces an empty output. Additionally, refactored the core configuration logic to centralize output paths, successfully eliminating path duplication and reducing potential routing errors. Finally, streamlined the repository by auditing and removing redundant code lines, ensuring a cleaner and more reliable foundation for downstream validation and testing.
+
+* **Sumukha:** Focused on the statistical correctness and evaluation rigor of the scoring pipeline. Built a new oracle evaluation harness that scores pipeline output against scenario_labels ground truth, wiring it in as a dedicated pipeline step with full test coverage. Drove a phase-1 score calibration effort retuning thresholds, switching graph centrality to PMI, and replacing optimistic metrics with honest ones. Resolved several phase-2 statistical defects, most notably eliminating Welford self-contamination in the streaming feature computation and auditing mean-fill behavior in the statistical features. Corrected incident severity aggregation to rank by true severity rather than alphabetical order. On the dashboard side, implemented the data access layer (database and Elasticsearch), added auto-detection of parsing mode on log upload, and contributed vendor-neutral and test dataset generators to support downstream validation.
+
+* **Shreeraksha M:** Implemented the dashboard log upload workflow, enabling users to upload single or multiple log files and trigger the analysis pipeline directly from the dashboard. Extended the pipeline to support directory-based syslog processing, integrated background pipeline execution with progress tracking, and added result summarization with error handling for uploaded log analysis.
+
+* **Sharva:** Conducted testing of the Upload & Analyze workflow with emphasis on anomaly detection metrics. Looked into inconsistencies in anomaly count reporting, validated anomaly data against database records, implemented necessary fixes, and verified dashboard behavior.
+
+* **Vishon Dsouza:** Working on testing the custom dashboard with different datasets to identify potential issues and validate dashboard functionality across various scenarios.
+
+---
