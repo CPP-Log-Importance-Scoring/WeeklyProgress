@@ -249,6 +249,7 @@
 - Evaluated the drift detection strategy and decided to add targeted alerts for gradual drift scenarios based on feature distribution shifts.
 - Confirmed synthetic dataset coverage for model validation, ensuring normal, drift, attack, and correlated failure cases were represented.
 
+
 ### Contribution:
 
 * **Ujwal Hegde:** Focused on improving the stability and maintainability of the core pipeline. Identified and resolved execution edge cases by implementing a critical fix to prevent the pipeline from silently continuing when a step produces an empty output. Additionally, refactored the core configuration logic to centralize output paths, successfully eliminating path duplication and reducing potential routing errors. Finally, streamlined the repository by auditing and removing redundant code lines, ensuring a cleaner and more reliable foundation for downstream validation and testing.
@@ -260,5 +261,17 @@
 * **Sharva:** Conducted testing of the Upload & Analyze workflow with emphasis on anomaly detection metrics. Looked into inconsistencies in anomaly count reporting, validated anomaly data against database records, implemented necessary fixes, and verified dashboard behavior.
 
 * **Vishon Dsouza:** Working on testing the custom dashboard with different datasets to identify potential issues and validate dashboard functionality across various scenarios.
+
+---
+
+## **CPP Meeting 16: 16/06/26**
+
+### Discussion:
+
+- The meeting was cancelled due to some technical difficulties.
+
+### Contribution:
+
+- No contributions for this week due to some technical difficulties.
 
 ---
