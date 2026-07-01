@@ -239,6 +239,8 @@
 
 * **Sharva:** Worked on synthetic data generation and validation for the anomaly detection pipeline. Created realistic network log scenarios covering normal behavior, routing instability, gradual drift, authentication attacks, and cross-system cascades. Defined anomaly and root-cause labels, validated dataset quality, and prepared ground-truth data for downstream ML training and evaluation.
 
+* **Vishon:** Worked on the storage layer by enhancing the database schema, implementing summary caching functionality, and adding support for loading pipeline output files into PostgreSQL. Verified loading of scored logs and root-cause data into Postgres, validated Elasticsearch indexing, initialized the custom dashboard module, and implemented database and Elasticsearch helper functions for dashboard data retrieval and log search.
+
 ---
 ## **CPP Meeting 15: 09/06/26**
 
