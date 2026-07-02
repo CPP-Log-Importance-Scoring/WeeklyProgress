@@ -1,4 +1,4 @@
-## **CPP Meeting 1 - 03/03/26**
+## **CPP Meeting 1: 03/03/26**
 
 ### Discussion:
 
@@ -72,11 +72,11 @@
 
 ### Contribution:
 
-- Ujwal: Worked on the system design, researched various AI/ML models suitable for log importance scoring, and identified Isolation Forest as a potential approach. Further explored its working and suitability for integration into the system
-- Sumukha: Worked on system design, researched on topics such as similarity search and methods to optimise existing design
-- Vishon: Reviewed the earlier sample dataset to understand its structure and format. Generated a new syslog-format dataset which contains ~10,000 logs covering network, security, system logs etc
-- Shreeraksha M: Implemented feature computation by mapping log levels and event types to numerical scores, and built event weight calculation using configurable weights. Also explored how template IDs are generated and how they help group similar logs for further analysis.
-- Sharva: Implemented the core parsing pipeline which includes the LogRecord schema with all stage wise fields, the syslog line parser with per service event extraction rules, and the template extraction module that normalises log messages and assigns template IDs to group similar logs.
+- **Ujwal Hegde**: Worked on the system design, researched various AI/ML models suitable for log importance scoring, and identified Isolation Forest as a potential approach. Further explored its working and suitability for integration into the system
+- **Sumukha**: Worked on system design, researched on topics such as similarity search and methods to optimise existing design
+- **Vishon**: Reviewed the earlier sample dataset to understand its structure and format. Generated a new syslog-format dataset which contains ~10,000 logs covering network, security, system logs etc
+- **Shreeraksha M**: Implemented feature computation by mapping log levels and event types to numerical scores, and built event weight calculation using configurable weights. Also explored how template IDs are generated and how they help group similar logs for further analysis.
+- **Sharva**: Implemented the core parsing pipeline which includes the LogRecord schema with all stage wise fields, the syslog line parser with per service event extraction rules, and the template extraction module that normalises log messages and assigns template IDs to group similar logs.
 
 ---
 
@@ -102,15 +102,15 @@
 
 ### Contribution:
 
-- Shreeraksha M: Completed implementation of event weight calculation using configurable weights and developed the importance scoring module by combining event weight, frequency, and correlation signals.
+- **Shreeraksha M**: Completed implementation of event weight calculation using configurable weights and developed the importance scoring module by combining event weight, frequency, and correlation signals.
 
-- Vishon Dsouza: Enhanced dataset (logs2.txt) with multiple log types and created logs3.txt with burst patterns and anomaly scenarios. Took team feedback to sort logs in ascending timestamp order.
+- **Vishon Dsouza**: Enhanced dataset (logs2.txt) with multiple log types and created logs3.txt with burst patterns and anomaly scenarios. Took team feedback to sort logs in ascending timestamp order.
 
-- Sharva: Validated the scoring pipeline by examining calculated scores across parsed log records, verifying that severity scores, event type scores, and event weights are correctly assigned across different log types.
+- **Sharva**: Validated the scoring pipeline by examining calculated scores across parsed log records, verifying that severity scores, event type scores, and event weights are correctly assigned across different log types.
 
-- Ujwal Hegde: Implemented the Isolation Forest–based anomaly detection pipeline and engineered features such as frequency, deviation, and rarity for model input. Analyzed model behavior in depth, including feature influence, path-based isolation, and anomaly scoring.
+- **Ujwal Hegde**: Implemented the Isolation Forest–based anomaly detection pipeline and engineered features such as frequency, deviation, and rarity for model input. Analyzed model behavior in depth, including feature influence, path-based isolation, and anomaly scoring.
 
-- Sumukha: Enhanced system design and added new layers to address challenges highlighted by the mentor and team. Also introduced graph-based computation for correlation and improved clarity on dynamic template creation and management.
+- **Sumukha**: Enhanced system design and added new layers to address challenges highlighted by the mentor and team. Also introduced graph-based computation for correlation and improved clarity on dynamic template creation and management.
 
 ---
 
@@ -125,15 +125,15 @@
 
 ### Contribution:
 
-- Sharva: Validated the dataset by examining log consistency and correctness across different scenarios, and tuned event weights to improve the accuracy and balance of the scoring mechanism across various log types and patterns
+- **Sharva**: Validated the dataset by examining log consistency and correctness across different scenarios, and tuned event weights to improve the accuracy and balance of the scoring mechanism across various log types and patterns
 
-- Sumukha: Could not contribute this week due to organizing a hackathon
+- **Sumukha**: Could not contribute this week due to organizing a hackathon
 
-- Ujwal Hegde: Improved the ML pipeline by refining the Isolation Forest model, enhancing feature engineering with frequency, deviation, rarity, and change, and making the system more robust through adaptive thresholding and generalized log handling
+- **Ujwal Hegde**: Improved the ML pipeline by refining the Isolation Forest model, enhancing feature engineering with frequency, deviation, rarity, and change, and making the system more robust through adaptive thresholding and generalized log handling
 
-- Shreeraksha M: Improved log importance scoring and cross-signal correlation by enhancing template-based grouping using dynamic template extraction and refining scoring weights to better reflect real-world incident severity
+- **Shreeraksha M**: Improved log importance scoring and cross-signal correlation by enhancing template-based grouping using dynamic template extraction and refining scoring weights to better reflect real-world incident severity
 
-- Vishon: Improved dataset based on prior feedback, simulating multi-host infrastructure with realistic noise and diverse events. Includes explicit attack chains and failure cascades for log correlation and anomaly detection
+- **Vishon**: Improved dataset based on prior feedback, simulating multi-host infrastructure with realistic noise and diverse events. Includes explicit attack chains and failure cascades for log correlation and anomaly detection
 
 ---
 
@@ -148,15 +148,15 @@
 
 ### Contribution:
 
-- Sumukha: Initialized the ML repository structure and configured persistent volumes for the database container. Conducted research into established methods for implementing the sequence analysis and correlation engine layers of the pipeline.
+- **Sumukha**: Initialized the ML repository structure and configured persistent volumes for the database container. Conducted research into established methods for implementing the sequence analysis and correlation engine layers of the pipeline.
 
-- Ujwal: Strengthened the ML pipeline by refining feature engineering and optimizing the Isolation Forest–based anomaly detection, and contributed to the design of the importance scoring layer by combining ML outputs with correlation and novelty signals.
+- **Ujwal Hegde**: Strengthened the ML pipeline by refining feature engineering and optimizing the Isolation Forest–based anomaly detection, and contributed to the design of the importance scoring layer by combining ML outputs with correlation and novelty signals.
 
-- Sharva: Compared the pipeline's log scoring output with LLM output to evaluate alignment and identify gaps in critical event detection.
+- **Sharva**: Compared the pipeline's log scoring output with LLM output to evaluate alignment and identify gaps in critical event detection.
 
-- Vishon: Configured a Docker Compose logging stack with PostgreSQL, Elasticsearch, Grafana, and Kibana. Updated service setup, secured credentials using .env, and added .gitignore. Successfully tested all containers locally and verified integration.
+- **Vishon**: Configured a Docker Compose logging stack with PostgreSQL, Elasticsearch, Grafana, and Kibana. Updated service setup, secured credentials using .env, and added .gitignore. Successfully tested all containers locally and verified integration.
 
-- Shreeraksha M: Validated and tuned the rule-based scoring system by experimenting with multiple datasets and refining weight configurations for improved log scoring. Initiated the ML anomaly detection pipeline by implementing a z-score based baseline and structuring the anomaly detection module in preparation for Isolation Forest integration and hybrid scoring.
+- **Shreeraksha M**: Validated and tuned the rule-based scoring system by experimenting with multiple datasets and refining weight configurations for improved log scoring. Initiated the ML anomaly detection pipeline by implementing a z-score based baseline and structuring the anomaly detection module in preparation for Isolation Forest integration and hybrid scoring.
 
 ## **CPP Meeting 10: 05/05/26**
 
@@ -169,15 +169,15 @@
 
 ### Contribution:
 
-- Sumukha: Implemented the correlation/graph_builder.py module in the correlation layer. Built a weighted undirected co-occurrence graph from parsed log events, linked flagged anomaly events to dedicated anomaly nodes, and added configurable parameters for the time window and node cap. Also added 23 unit tests and a manual inspection script.
+- **Sumukha**: Implemented the correlation/graph_builder.py module in the correlation layer. Built a weighted undirected co-occurrence graph from parsed log events, linked flagged anomaly events to dedicated anomaly nodes, and added configurable parameters for the time window and node cap. Also added 23 unit tests and a manual inspection script.
 
-- Ujwal: Initialized the scoring module structure and configuration by defining scoring weights, label thresholds, and DBSCAN parameters. Set up module stubs, input/output contracts, and updated the README with scoring pipeline documentation.
+- **Ujwal Hegde**: Initialized the scoring module structure and configuration by defining scoring weights, label thresholds, and DBSCAN parameters. Set up module stubs, input/output contracts, and updated the README with scoring pipeline documentation.
 
-- Sharva: Developed the simulated sessionized log pipeline and implemented feature extraction for session-level metrics such as frequency and burstiness scores. Validated schema consistency and structured the pipeline to support further ML integration and anomaly detection enhancements.
+- **Sharva**: Developed the simulated sessionized log pipeline and implemented feature extraction for session-level metrics such as frequency and burstiness scores. Validated schema consistency and structured the pipeline to support further ML integration and anomaly detection enhancements.
 
-- Vishon: Defined the PostgreSQL schema structure for logs and related pipeline data, verified table creation and consistency locally using Docker, configured the db_writer module to align with the database schema, created Elasticsearch index mappings for log fields, and implemented centralized .env-based environment variable handling with validation support.
+- **Vishon**: Defined the PostgreSQL schema structure for logs and related pipeline data, verified table creation and consistency locally using Docker, configured the db_writer module to align with the database schema, created Elasticsearch index mappings for log fields, and implemented centralized .env-based environment variable handling with validation support.
 
-- Shreeraksha M: Initiated the ML anomaly detection module by implementing the Isolation Forest–based anomaly detector skeleton with configurable contamination and hybrid scoring parameters. Worked on the initial trainer module structure for retraining and model serialization, documented key ML design decisions, and added preliminary tests for anomaly output and schema validation.
+- **Shreeraksha M**: Initiated the ML anomaly detection module by implementing the Isolation Forest–based anomaly detector skeleton with configurable contamination and hybrid scoring parameters. Worked on the initial trainer module structure for retraining and model serialization, documented key ML design decisions, and added preliminary tests for anomaly output and schema validation.
 
 
 ## **CPP Meeting 11: 12/05/26**
@@ -188,15 +188,15 @@
 
 ### Contribution:
 
-* Sharva Dhanvi V: Continued development of the Phase 2 feature engineering pipeline by integrating all feature modules into feature_pipeline.py. Implemented statistical, temporal, severity, and counter proximity features on sessionized log data, added schema validation and parquet export support, improved malformed-row handling with centralized logging, and expanded edge-case testing for timestamp ordering, sparse sessions, and missing values.
+* **Sharva Dhanvi V**: Continued development of the Phase 2 feature engineering pipeline by integrating all feature modules into feature_pipeline.py. Implemented statistical, temporal, severity, and counter proximity features on sessionized log data, added schema validation and parquet export support, improved malformed-row handling with centralized logging, and expanded edge-case testing for timestamp ordering, sparse sessions, and missing values.
 
-* Shreeraksha M: Continued implementation of the ML anomaly detection layer using Isolation Forest with configurable contamination and hybrid scoring support. Worked on sliding-window retraining, model persistence, cold-start fallback handling, anomaly output generation, and evaluator/test coverage for anomaly scoring workflows.
+* **Shreeraksha M**: Continued implementation of the ML anomaly detection layer using Isolation Forest with configurable contamination and hybrid scoring support. Worked on sliding-window retraining, model persistence, cold-start fallback handling, anomaly output generation, and evaluator/test coverage for anomaly scoring workflows.
 
-* Sumukha Rao H: Continued development of the correlation and shared infrastructure layers by scaling the graph builder for real datasets, implementing centrality computation and sequence detection, generating graph scoring outputs and graph exports, and simultaneously maintaining parsing validation, shared schema definitions, logger utilities, helper functions, and end-to-end pipeline orchestration support.
+* **Sumukha Rao H**: Continued development of the correlation and shared infrastructure layers by scaling the graph builder for real datasets, implementing centrality computation and sequence detection, generating graph scoring outputs and graph exports, and simultaneously maintaining parsing validation, shared schema definitions, logger utilities, helper functions, and end-to-end pipeline orchestration support.
 
-* Ujwal Hegde: Continued integration of the importance scoring pipeline by combining anomaly outputs, graph scores, and engineered features into a unified scoring workflow. Worked on configurable label mapping, DBSCAN-based incident clustering, root cause ranking, confidence scoring, and finalized output schema handling for scored logs and root cause datasets.
+* **Ujwal Hegde**: Continued integration of the importance scoring pipeline by combining anomaly outputs, graph scores, and engineered features into a unified scoring workflow. Worked on configurable label mapping, DBSCAN-based incident clustering, root cause ranking, confidence scoring, and finalized output schema handling for scored logs and root cause datasets.
 
-* Vishon Dsouza: Continued implementation of storage and visualization modules by developing PostgreSQL and Elasticsearch writers, refining schema and indexing support, scaffolding evaluation and benchmarking utilities, and configuring Grafana and Kibana dashboards for anomaly visualization, incident monitoring, and log exploration workflows.
+* **Vishon Dsouza**: Continued implementation of storage and visualization modules by developing PostgreSQL and Elasticsearch writers, refining schema and indexing support, scaffolding evaluation and benchmarking utilities, and configuring Grafana and Kibana dashboards for anomaly visualization, incident monitoring, and log exploration workflows.
 
 ---
 ## **CPP Meeting 12: 19/05/26**
@@ -265,7 +265,7 @@
 * **Sumukha**: Focused on extending and stabilizing the anomaly detection pipeline against the multi-section synthetic dataset. I built a section-aware loader to handle the dataset's structure, allowing each section to be ingested and processed correctly. I then joined Section-4 numeric metrics in as additional IsolationForest features to strengthen detection. I recalibrated the anomaly flagging logic and fixed a NaN write in the storage layer that was corrupting output. To better catch gradual drift, I introduced rolling-slope trend features that track change over time. Finally, I resolved a memory overflow in the correlation layer, improving the pipeline's stability and reliability.
 
 ---
-## **CPP Meeting 16: 16/06/26**
+## **CPP Meeting 16: 17/06/26**
 
 ### Discussion:
 
@@ -281,5 +281,25 @@
 * **Shreeraksha M** : Implemented the dashboard log upload workflow, enabling users to upload single or multiple log files and trigger the analysis pipeline directly from the dashboard. Extended the pipeline to support directory-based syslog processing, integrated background pipeline execution with progress tracking, and added result summarization with error handling for uploaded log analysis.
 
 * **Sumukha**: Focused on the statistical correctness and evaluation rigor of the scoring pipeline. Built a new oracle evaluation harness that scores pipeline output against scenario_labels ground truth, wiring it in as a dedicated pipeline step with full test coverage. Drove a phase-1 score calibration effort retuning thresholds, switching graph centrality to PMI, and replacing optimistic metrics with honest ones. Resolved several phase-2 statistical defects, most notably eliminating Welford self-contamination in the streaming feature computation and auditing mean-fill behavior in the statistical features. Corrected incident severity aggregation to rank by true severity rather than alphabetical order. On the dashboard side, implemented the data access layer (database and Elasticsearch), added auto-detection of parsing mode on log upload, and contributed vendor-neutral and test dataset generators to support downstream validation.
+
+---
+## **CPP Meeting 17: 24/06/26**
+
+### Discussion:
+
+- Presented a working end-to-end demo of the pipeline running against synthetic datasets with anomaly detection and incident visualization on the dashboard.
+- Mentor provided feedback on improving log parsing robustness across different log formats and optimizing anomaly detection thresholds for production accuracy.
+- Discussed the correlation mechanism and graph-based approach for capturing dependencies between log events across hosts and time windows.
+
+### Contribution:
+* **Ujwal Hegde**: Focused on making the log processing pipeline more extensible and dataset-agnostic through a major architectural refactor. Successfully externalized the hardcoded service resolution logic by implementing a robust YAML-based dataset profile loader. To support this, created default profiles for HPE synthetic datasets, Kubernetes/Linux environments, and a generic starter template to easily onboard new log sources without requiring code changes. Additionally, engineered a vendor-neutral synthetic log generator to produce multi-section scenario logs for robust testing. Ensured the high reliability of all these changes by writing comprehensive unit tests for the normalizer and an extensive QA test suite that rigorously validates service alias resolution, profile switching, and noise suppression.
+
+* **Sumukha**: This week was split between standing up the dashboard, packaging the services in Docker, and tightening the scoring and parsing logic. in the dashbord I tracked the data access layer, added auto-detection of parsing mode on upload, unified the sidebar into a shared emoji navbar, and fixed unreadable white-on-white expander text. For the build, I split the requirements into per-service files to slim the dashboard image, pinned dependencies to known-good versions, and cleaned up redundant install steps. On scoring, I did a lot of tuning to separate real incidents from clean-day noise — ranking onset over recovery, damping benign status lines that were wrongly reaching critical, raising the critical cutoff above the measured clean-day maximum, and bounding incidents to activity bursts to stop multi-day mega-clusters. I replaced the DBSCAN incident clustering with anomaly-seeded temporal windowing, added a component rate-drift scorer (left disabled pending a cross-day baseline), and capped up parsing to prevent mega-sessions and infer Section-3 severity properly. I added run-scoped storage keys so batch uploads accumulate instead of overwriting, built a sim_real corpus generator for train-to-held-out-test evaluation, and capped the week with the incident escalation gate and surfacing it in the dashboard feed.
+
+* **Vishon**: Continued testing the custom dashboard using different datasets to evaluate its overall functionality. Reviewed dashboard behavior under different filtering and incident scenarios to identify inconsistencies in the displayed results. Continued validating dashboard features to ensure expected behavior across different datasets.
+
+* **Sharva**: Focused on pipeline execution failures by debugging Docker, PostgreSQL, and container configuration issues. Identified a database schema mismatch related to the run_id field, recreated the PostgreSQL environment, applied the updated database schema, validated the table structure, and successfully restored execution with data being stored correctly in PostgreSQL.
+
+* **Shreeraksha M**: Enhanced the dashboard by adding archive upload support (.zip, .tar, .tar.gz, .tgz) and integrating the Upload & Analyze workflow with the Incident Feed and Incident Detail pages for seamless visualization of newly generated incidents. Implemented persistent dashboard filters across page navigation, added evaluation metrics for ML pipeline assessment, resolved Windows-specific UnicodeEncodeError issues and synthetic loader encoding problems, fixed Host Health and anomaly count database query issues.
 
 ---
