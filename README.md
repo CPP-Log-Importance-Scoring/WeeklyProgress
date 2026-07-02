@@ -303,3 +303,23 @@
 * **Shreeraksha M**: Enhanced the dashboard by adding archive upload support (.zip, .tar, .tar.gz, .tgz) and integrating the Upload & Analyze workflow with the Incident Feed and Incident Detail pages for seamless visualization of newly generated incidents. Implemented persistent dashboard filters across page navigation, added evaluation metrics for ML pipeline assessment, resolved Windows-specific UnicodeEncodeError issues and synthetic loader encoding problems, fixed Host Health and anomaly count database query issues.
 
 ---
+## **CPP Meeting 18: 01/07/26**
+
+### Discussion:
+
+- Presented the final end-to-end pipeline demo incorporating feedback from the previous meeting, demonstrating improved log parsing robustness and optimized anomaly detection thresholds on diverse synthetic datasets.
+- Reviewed the final PPT presentation and video demonstration of the complete system workflow, dashboard functionality, and anomaly detection outputs.
+- Mentor provided feedback on dashboard usability, result presentation clarity, and suggestions for refining incident visualization and search capabilities for better user experience.
+
+### Contribution:
+* **Ujwal Hegde**: Focused on enhancing the dashboard user experience and rigorously evaluating the model's performance. On the frontend, implemented JSON-based persistence for dashboard filters, unified the time window state globally, and ensured that default time boundaries align exactly with the uploaded data. Further polished the UI by fixing button alignments on the incident detail page, resolving a query error on the host health page, and adding clear page descriptions across all main views. On the machine learning side, engineered a robust evaluation pipeline by creating scripts to generate "360 eval" datasets and run model comparisons. This effort culminated in detailed JSON results and a comprehensive 360 evaluation report comparing the performance of the anomaly detection models.
+
+* **Sumukha**: This week centered on making incident detection reliable, improving correlation, and adding LLM-powered summaries. I made incident escalation reliable and added incident-level evaluation, then required incidents to actually be groups and made the clustering deterministic. I built a 7-section network-log generator to produce contamination-free clean training data plus test sets, and fixed cross-run correlation chaining so it stays accurate across multiple runs. On severity, I promoted PSU and redundancy-loss lines to high severity. For the LLM side, I migrated incident summary generation from Gemini to Groq and reworked it to generate summaries on demand rather than baking them into the pipeline, passing richer context (host, duration, log count, and top logs) into the summary. I also consolidated the stack by removing Grafana and Kibana in favor of the Streamlit dashboard, surfaced only critical logs in the Upload & Analyze results, anchored dashboard search windows to the latest indexed log.
+
+* **Vishon**: Focused on visualization layers for errors, completed testing of the custom dashboard using multiple datasets to validate functionality, filtering, and data visualization across different scenarios. Reviewed dashboard behavior to identify inconsistencies and ensure accurate results, and also prepared for the final presentation.
+
+* **Sharva**: Tested dashboard integration with the updated database, validated successful data persistence, and resolved remaining configuration issues to ensure the dashboard displayed the processed results correctly.
+
+* **Shreeraksha M**:  Enhanced the dashboard by integrating Elasticsearch indexing for scored logs, enabling efficient full-text search and filtering through the Log Search module. Resolved issues related to Groq-powered incident summary generation to ensure reliable execution during local dashboard deployments, including improved error handling and compatibility with the local runtime environment. Refined the Incident Feed and Incident Detail interfaces by improving layout, navigation, visual hierarchy, and presentation of incident metadata to provide a more intuitive investigation workflow. Additionally, updated the Streamlit configuration to default to the light theme, ensuring a consistent user interface across environments and improving overall usability and readability during dashboard demonstrations.
+
+---
