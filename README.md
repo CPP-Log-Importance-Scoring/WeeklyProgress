@@ -1,3 +1,8 @@
+## Related Repositories
+
+- **Rule Based Implementation:** [https://github.com/CPP-Log-Importance-Scoring/RuleBasedScoring](https://github.com/CPP-Log-Importance-Scoring/RuleBasedScoring)
+- **ML Implementation:** [https://github.com/CPP-Log-Importance-Scoring/ML-implementation](https://github.com/CPP-Log-Importance-Scoring/ML-implementation)
+
 ## **CPP Meeting 1: 03/03/26**
 
 ### Discussion:
